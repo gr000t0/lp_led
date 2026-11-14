@@ -1,0 +1,22 @@
+Build-Prüfung: 2026-11-11
+Target: ESP32-C6
+ESP-IDF: 6.0.3 (release/v6.0), Commit 5f86253bbcfe82fd386828c3af9fbc76a266a331
+Frische Konfiguration aus sdkconfig.defaults, kein alter Build-Cache.
+Befehl: idf.py build
+Ergebnis: PASS, Exit-Code 0; ELF und Firmware-Image erfolgreich erzeugt.
+Firmware: 1595648 Bytes (0x185900)
+App-Partition: 0x1f0000 Bytes; 0x6a700 / 21% frei.
+Flash-Layout: 2 MB, Factory-App, kein OTA.
+SHA-256 der geprüften Firmware: 7f60dde2110d173b916687e9c5c34d65f89c47e99b1bed149d291af81d2e3dde
+Bluedroid aktiviert, NimBLE deaktiviert; Legacy-Advertising aktiviert.
+Main-Task-Stack: 6144 Bytes; eine BLE-Verbindung.
+Zwei SDK-Warnungen zu unbenutzten BLE-Modem-Sleep-Funktionen;
+keine Compilerwarnungen aus den eigenen Projektdateien.
+
+Hosttests: bash tests/run_host_tests.sh
+PASS: credential bounds, password rules, RGB, prepared-write fragmentation/cancel
+AddressSanitizer und UndefinedBehaviorSanitizer aktiv (LeakSanitizer aus).
+
+Keine Ausführung auf echtem Board; BLE/WLAN/NTP/Sleep/Stromverbrauch sind physisch
+noch nicht verifiziert. Siehe VALIDATION.md.
+ZIP enthält Quellcode, keine Build-Caches oder vorgefertigten Firmware-Images.
