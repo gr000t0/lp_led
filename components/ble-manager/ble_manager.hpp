@@ -18,7 +18,6 @@ public:
     BleManager(const BleManager&) = delete;
     BleManager& operator=(const BleManager&) = delete;
 
-    
     esp_err_t cold_start();
     esp_err_t start_advertising();
     esp_err_t stop_advertising();
@@ -40,7 +39,7 @@ private:
                               esp_ble_gatts_cb_param_t* p);
     esp_gatt_status_t handle_write(uint16_t handle, const uint8_t* data, uint16_t len);
 
-    // Nur für die asynchronen Abschlüsse, auf die pause/stop warten müssen.
+
     static constexpr EventBits_t READY = BIT0;
     static constexpr EventBits_t ADV_STOPPED = BIT1;
     static constexpr EventBits_t DISCONNECTED = BIT2;

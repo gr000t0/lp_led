@@ -1,7 +1,13 @@
 #pragma once
-#include "credentials.hpp"
 #include "esp_err.h"
-class SettingsManager {
+
+struct WifiCredentials{
+    char ssid[32]{};
+    char password[64]{};
+};
+
+class CredentialsManager {
+    
 public:
     esp_err_t init();
     esp_err_t load_wifi(WifiCredentials& out);
